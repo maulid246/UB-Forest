@@ -27,7 +27,7 @@
     <div class="container-fluid py-4">
         <div class="card">
             <div class="card-header pb-0 px-3">
-                <h6 class="mb-0">{{ __('Informasi Profil') }}</h6>
+                <h6 class="mb-0">{{ __('Profile Information') }}</h6>
             </div>
             <div class="card-body pt-4 p-3">
                 <form action="/user-profile" method="POST" role="form text-left">
@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user-name" class="form-control-label">{{ __('Nama Lengkap') }}</label>
+                                <label for="user-name" class="form-control-label">{{ __('Full Name') }}</label>
                                 <div class="@error('user.name') border border-danger rounded-3 @enderror">
                                     <input class="form-control" value="{{ auth()->user()->name }}" type="text" placeholder="Name" id="user-name" name="name">
                                     @error('name')
@@ -77,9 +77,9 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user.phone" class="form-control-label">{{ __('No.Telp') }}</label>
+                                <label for="user.phone" class="form-control-label">{{ __('Phone Number') }}</label>
                                 <div class="@error('user.phone') border border-danger rounded-3 @enderror">
-                                    <input class="form-control" type="tel" placeholder="08881234567" id="number" name="phone" value="{{ auth()->user()->phone }}">
+                                    <input class="form-control" type="tel" placeholder="phone" id="number" name="phone" value="{{ auth()->user()->phone }}">
                                     @error('phone')
                                         <p class="text-danger text-xs mt-2">{{ $message }}</p>
                                     @enderror
@@ -88,9 +88,9 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="user.jabatan" class="form-control-label">{{ __('Jabatan') }}</label>
+                                <label for="user.jabatan" class="form-control-label">{{ __('Position') }}</label>
                                 <div class="@error('user.jabatan') border border-danger rounded-3 @enderror">
-                                    <input class="form-control" type="text" placeholder="Jabatan" id="user-jabatan" name="jabatan" value="{{ auth()->user()->jabatan }}">
+                                    <input class="form-control" type="text" placeholder="position" id="user-jabatan" name="jabatan" value="{{ auth()->user()->jabatan }}">
                                 </div>
                             </div>
                         </div>
@@ -100,10 +100,10 @@
                         <div class="col-md-10">
                             <div class="card mt-4">
                                 <div class="card-body">
-                                    <h6 class="mb-1">Keterangan</h6>
+                                    <h6 class="mb-1">Note</h6>
                                     <p class="text-sm">
-                                        1. Bagian nomor telepon harap isi dengan awalan 62 bukan 0 agar tampil pada profile. <br>
-                                        2. Pada bagian jabatan harap diisi dengan jabatan yang sesuai, misal nya: Dosen, Mahasiswa, Staff Kampus, dll.
+                                    1. Please enter the phone number starting with country code (62) instead of 0 so it displays correctly on the profile. <br>
+                                    2. In the Position section, please enter the appropriate position, for example: Lecturer, Student, Campus Staff, etc.
                                     </p>
                                 </div>
                             </div>

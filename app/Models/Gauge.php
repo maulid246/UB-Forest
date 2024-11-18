@@ -10,8 +10,8 @@ class Gauge extends Model
     use HasFactory;
 
     // Tentukan nama tabel jika berbeda dari nama model
-    protected $table = 'gauges';
+    protected $table = 'sensor_data';
 
     // Tentukan kolom yang bisa diisi (mass assignable)
-    protected $fillable = ['temperature', 'humidity'];
+    protected $fillable = ['temperature', 'humidity', 'soil_moisture', 'rain_status', 'timestamp'];
 }
